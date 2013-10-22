@@ -1,5 +1,5 @@
 /**
- * @fileoverview Externs for the easeljs
+ * @fileoverview Externs for preloadjs
  * @externs
  */
 
@@ -9,13 +9,45 @@
  */
 createjs.AbstractLoader = function() {};
 
+
 /**
- * @param {string} type
- * @param {Function|Object} listener
- * @return {Function|Object}
- * @override
+ * @type {boolean}
  */
-createjs.AbstractLoader.prototype.addEventListener = function(type, listener) {};
+createjs.AbstractLoader.prototype.canceled;
+
+/**
+ * @type {boolean}
+ */
+createjs.AbstractLoader.prototype.loaded;
+
+/**
+ * @deprecated Listen to 'complete' event
+ * @type {Function}
+ */
+createjs.AbstractLoader.prototype.onComplete;
+
+/**
+ * @deprecated Listen to 'error' event
+ * @type {Function}
+ */
+createjs.AbstractLoader.prototype.onError;
+
+/**
+ * @deprecated Listen to 'loadstart' event
+ * @type {Function}
+ */
+createjs.AbstractLoader.prototype.onLoadStart;
+
+/**
+ * @deprecated Listen to 'progress' event
+ * @type {Function}
+ */
+createjs.AbstractLoader.prototype.onProgress;
+
+/**
+ * @type {number}
+ */
+createjs.AbstractLoader.prototype.progress;
 
 /**
  * @param {string} src
@@ -31,55 +63,6 @@ createjs.AbstractLoader.prototype.buildPath = function(src, basePath, data) {};
 createjs.AbstractLoader.prototype.close = function() {};
 
 /**
- * @param {Object|string} eventObj
- * @param {Object=} target
- * @return {boolean}
- * @override
- */
-createjs.AbstractLoader.prototype.dispatchEvent = function(eventObj, target) {};
-
-/**
- * @param {string} type
- * @return {boolean}
- * @override
- */
-createjs.AbstractLoader.prototype.hasEventListener = function(type) {};
-
-/**
  *
  */
 createjs.AbstractLoader.prototype.load = function() {};
-
-/**
- * @param {string=} type
- * @override
- */
-createjs.AbstractLoader.prototype.removeAllEventListeners = function(type) {};
-
-/**
- * @param {string} type
- * @param {Function|Object} listener
- * @override
- */
-createjs.AbstractLoader.prototype.removeEventListener  = function(type, listener) {};
-
-/**
- * @return {string}
- * @override
- */
-createjs.AbstractLoader.prototype.toString = function() {};
-
-/**
- * @type {boolean}
- */
-createjs.AbstractLoader.prototype.canceled;
-
-/**
- * @type {boolean}
- */
-createjs.AbstractLoader.prototype.loaded;
-
-/**
- * @type {boolean}
- */
-createjs.AbstractLoader.prototype.progress;

@@ -1,5 +1,5 @@
 /**
- * @fileoverview Externs for the easeljs
+ * @fileoverview Externs for easeljs
  * @externs
  */
 
@@ -13,6 +13,11 @@ createjs.Container = function() {};
  * @type {Array.<createjs.DisplayObject>}
  */
 createjs.Container.prototype.children;
+
+/**
+ * @type {boolean}
+ */
+createjs.Container.prototype.mouseChildren;
 
 /**
  * @param {createjs.DisplayObject} child
@@ -69,6 +74,11 @@ createjs.Container.prototype.getObjectsUnderPoint = function(x, y) {};
  * @return {createjs.DisplayObject}
  */
 createjs.Container.prototype.getObjectUnderPoint = function(x, y) {};
+
+/**
+ * 
+ */
+createjs.Container.prototype.initialize = function() {};
 
 /**
  *

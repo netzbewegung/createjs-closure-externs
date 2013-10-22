@@ -1,5 +1,5 @@
 /**
- * @fileoverview Externs for the easeljs
+ * @fileoverview Externs for tweenjs
  * @externs
  */
 

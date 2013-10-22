@@ -1,5 +1,5 @@
 /**
- * @fileoverview Externs for the easeljs
+ * @fileoverview Externs for easeljs
  * @externs
  */
 
@@ -10,9 +10,42 @@
 createjs.Ticker = function() {};
 
 /**
+ * @type {number}
+ */
+createjs.Ticker.maxDelta;
+
+/**
+ * @type {string}
+ */
+createjs.Ticker.RAF;
+
+/**
+ * @type {string}
+ */
+createjs.Ticker.RAF_SYNCHED;
+
+/**
+ * @type {string}
+ */
+createjs.Ticker.TIMEOUT;
+
+/**
+ * @type {string}
+ */
+createjs.Ticker.timingMode;
+
+/**
+ * @deprecated Deprecated in favour of {{#crossLink "Ticker/timingMode"}}{{/crossLink}}.
  * @type {boolean}
  */
 createjs.Ticker.useRAF;
+
+/**
+ * @param {boolean} runTime
+ * @return {number}
+ */
+createjs.Ticker.getEventTime = function(runTime) {};
+
 /**
  * @return {number}
  */
@@ -30,6 +63,12 @@ createjs.Ticker.getInterval = function() {};
 createjs.Ticker.getMeasuredFPS = function(ticks) {};
 
 /**
+ * @param {number=} ticks
+ * @return {number}
+ */
+createjs.Ticker.getMeasuredTickTime = function(ticks) {};
+
+/**
  * @return {boolean}
  */
 createjs.Ticker.getPaused = function() {};
@@ -41,15 +80,20 @@ createjs.Ticker.getPaused = function() {};
 createjs.Ticker.getTicks = function(pauseable) {};
 
 /**
- * @param {boolean} pauseable
+ * @param {boolean} runTime
  * @return {number}
  */
-createjs.Ticker.getTime = function(pauseable) {};
+createjs.Ticker.getTime = function(runTime) {};
 
 /**
  *
  */
 createjs.Ticker.init = function() {};
+
+/**
+ *
+ */
+createjs.Ticker.reset = function() {};
 
 /**
  * @param {number} value
@@ -66,12 +110,14 @@ createjs.Ticker.setInterval = function(interval) {};
  */
 createjs.Ticker.setPaused = function(value) {};
 
+
 /**
  * @param {string} type
  * @param {Function|Object} listener
+ * @param {boolean=} useCapture
  * @return {Function|Object}
  */
-createjs.Ticker.addEventListener  = function(type, listener) {};
+createjs.Ticker.addEventListener  = function(type, listener, useCapture) {};
 
 /**
  * @param {Object|String} eventObj
@@ -94,8 +140,9 @@ createjs.Ticker.removeAllEventListeners = function(type) {};
 /**
  * @param {string} type
  * @param {Function|Object} listener
+ * @param {boolean=} useCapture
  */
-createjs.Ticker.removeEventListener = function(type, listener) {};
+createjs.Ticker.removeEventListener = function(type, listener, useCapture) {};
 
 /**
  * @return {string}

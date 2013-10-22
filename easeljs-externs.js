@@ -1,12 +1,7 @@
 /**
- * @fileoverview Externs for the easeljs
+ * @fileoverview Externs for easeljs
  * @externs
  */
-
-/**
- * @type {Object}
- */
-var createjs = {};
 
 /**
  * @constructor

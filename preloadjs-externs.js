@@ -1,8 +1,8 @@
 /**
- * @fileoverview Externs for the easeljs
+ * @fileoverview Externs for preloadjs
  * @externs
  */
-
+ 
 /**
  * @constructor
  */

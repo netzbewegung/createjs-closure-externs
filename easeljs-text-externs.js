@@ -1,5 +1,5 @@
 /**
- * @fileoverview Externs for the easeljs
+ * @fileoverview Externs for easeljs
  * @externs
  */
 
@@ -38,7 +38,7 @@ createjs.Text.prototype.lineWidth;
 createjs.Text.prototype.maxWidth;
 
 /**
- * @type {boolean}
+ * @type {number}
  */
 createjs.Text.prototype.outline;
 

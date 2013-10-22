@@ -1,5 +1,5 @@
 /**
- * @fileoverview Externs for the easeljs
+ * @fileoverview Externs for easeljs
  * @externs
  */
 
@@ -14,6 +14,11 @@ createjs.Graphics = function() {};
 createjs.Graphics.BASE_64;
 
 /**
+ * @type {Function}
+ */
+createjs.Graphics.Command;
+
+/**
  * @type {Array}
  */
 createjs.Graphics.STROKE_CAPS_MAP;
@@ -22,6 +27,17 @@ createjs.Graphics.STROKE_CAPS_MAP;
  * @type {Array}
  */
 createjs.Graphics.STROKE_JOINTS_MAP;
+
+/**
+ * @param {number} x
+ * @param {number} y
+ * @param {number} radius
+ * @param {number} startAngle
+ * @param {number} endAngle
+ * @param {boolean} anticlockwise
+ * @return {createjs.Graphics}
+ */
+createjs.Graphics.prototype.a = function(x, y, radius, startAngle, endAngle, anticlockwise) {};
 
 /**
  * @param {number} x
@@ -423,7 +439,7 @@ createjs.Graphics.prototype.endStroke = function() {};
  * @param {number} hue
  * @param {number} saturation
  * @param {number} lightness
- * @param {number} alpha
+ * @param {number=} alpha
  * @return {string}
  */
 createjs.Graphics.getHSL = function(hue, saturation, lightness, alpha) {};
@@ -432,15 +448,27 @@ createjs.Graphics.getHSL = function(hue, saturation, lightness, alpha) {};
  * @param {number} r
  * @param {number} g
  * @param {number} b
- * @param {number} alpha
+ * @param {number=} alpha
  * @return {string}
  */
 createjs.Graphics.getRGB = function(r, g, b, alpha) {};
 
 /**
+ * 
+ */
+createjs.Graphics.prototype.initialize = function() {};
+
+/**
+ * @param {Function} callback
+ * @param {Object} data
+ * @return {createjs.Graphics}
+ */
+createjs.Graphics.prototype.inject = function(callback, data) {};
+
+/**
  * @return {boolean}
  */
-createjs.Graphics.isEmpty  = function() {};
+createjs.Graphics.isEmpty = function() {};
 
 /**
  * @param {number} x

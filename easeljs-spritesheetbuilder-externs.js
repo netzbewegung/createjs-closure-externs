@@ -1,5 +1,5 @@
 /**
- * @fileoverview Externs for the easeljs
+ * @fileoverview Externs for easeljs
  * @externs
  */
 
@@ -12,11 +12,6 @@ createjs.SpriteSheetBuilder = function() {};
 /**
  * @type {number}
  */
-createjs.SpriteSheetBuilder.prototype.defaultScale;
-
-/**
- * @type {number}
- */
 createjs.SpriteSheetBuilder.prototype.maxHeight;
 
 /**
@@ -25,9 +20,16 @@ createjs.SpriteSheetBuilder.prototype.maxHeight;
 createjs.SpriteSheetBuilder.prototype.maxWidth;
 
 /**
+ * @deprecated Listen to 'complete' event
  * @type {Function}
  */
 createjs.SpriteSheetBuilder.prototype.onComplete;
+
+/**
+ * @deprecated Listen to 'progress' event
+ * @type {Function}
+ */
+createjs.SpriteSheetBuilder.prototype.onProgress;
 
 /**
  * @type {number}
@@ -38,6 +40,11 @@ createjs.SpriteSheetBuilder.prototype.padding;
  * @type {number}
  */
 createjs.SpriteSheetBuilder.prototype.progress;
+
+/**
+ * @type {number}
+ */
+createjs.SpriteSheetBuilder.prototype.scale;
 
 /**
  * @type {createjs.SpriteSheet}
@@ -77,7 +84,7 @@ createjs.SpriteSheetBuilder.prototype.addFrame = function(source, sourceRect, sc
 createjs.SpriteSheetBuilder.prototype.addMovieClip = function(source, sourceRect, scale) {};
 
 /**
- * 
+ * @return {createjs.SpriteSheet}
  */
 createjs.SpriteSheetBuilder.prototype.build = function() {};
 

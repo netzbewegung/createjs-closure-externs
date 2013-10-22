@@ -1,5 +1,5 @@
 /**
- * @fileoverview Externs for the easeljs
+ * @fileoverview Externs for easeljs
  * @externs
  */
 
@@ -9,6 +9,7 @@
 createjs.SpriteSheetUtils = function() {};
 
 /**
+ * @deprecated Modern browsers perform better when flipping via a transform (ex. scaleX=-1) rendering this obsolete.
  * @param {createjs.SpriteSheet} spriteSheetImage
  * @param {boolean} horizontal
  * @param {boolean} vertical
@@ -18,12 +19,13 @@ createjs.SpriteSheetUtils.addFlippedFrames = function(spriteSheetImage, horizont
 
 /**
  * @param {createjs.SpriteSheet} spriteSheet
- * @param {number|string} frame
+ * @param {number|string} frameOrAnimation
  * @return {Image}
  */
-createjs.SpriteSheetUtils.extractFrame = function(spriteSheet, frame) {};
+createjs.SpriteSheetUtils.extractFrame = function(spriteSheet, frameOrAnimation) {};
 
 /**
+ * @deprecated Tools such as ImageAlpha generally provide better results. This will be moved to sandbox in the future.
  * @param {Image} rbgImage
  * @param {Image} alphaImage
  * @param {HTMLCanvasElement} canvas

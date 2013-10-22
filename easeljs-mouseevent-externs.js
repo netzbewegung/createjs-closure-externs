@@ -1,5 +1,5 @@
 /**
- * @fileoverview Externs for the easeljs
+ * @fileoverview Externs for easeljs
  * @externs
  */
 
@@ -14,7 +14,7 @@
  * @param {boolean} primary
  * @param {number} rawX
  * @param {number} rawY
- * @extends {createjs.EventDispatcher}
+ * @extends {createjs.Event}
  */
 createjs.MouseEvent = function(type, stageX, stageY, target, nativeEvent, pointerID, primary, rawX, rawY) {};
 
@@ -22,6 +22,18 @@ createjs.MouseEvent = function(type, stageX, stageY, target, nativeEvent, pointe
  * @type {Event}
  */
 createjs.MouseEvent.prototype.nativeEvent;
+
+/**
+ * @deprecated Listen to 'pressmove' event
+ * @type {Function}
+ */
+createjs.MouseEvent.prototype.onMouseMove;
+
+/**
+ * @deprecated Listen to 'pressUp' event
+ * @type {Function}
+ */
+createjs.MouseEvent.prototype.onMouseUp;
 
 /**
  * @type {number}
@@ -54,29 +66,63 @@ createjs.MouseEvent.prototype.stageX;
 createjs.MouseEvent.prototype.stageY;
 
 /**
- * @type {createjs.DisplayObject}
+ * @param {string} type
+ * @param {Function|Object} listener
+ * @param {boolean=} useCapture
+ * @return {Function|Object}
  */
-createjs.MouseEvent.prototype.target;
+createjs.MouseEvent.prototype.addEventListener  = function(type, listener, useCapture) {};
 
 /**
- * @type {string}
+ * @param {Object|String} eventObj
+ * @param {Object=} target
+ * @return {boolean}
  */
-createjs.MouseEvent.prototype.type;
-
-/**
- * @return {createjs.MouseEvent}
- */
-createjs.MouseEvent.prototype.clone = function() {};
+createjs.MouseEvent.prototype.dispatchEvent = function(eventObj, target) {};
 
 /**
  * @param {string} type
- * @param {number} stageX
- * @param {number} stageY
- * @param {createjs.DisplayObject} target
- * @param {Event} nativeEvent
- * @param {number} pointerID
- * @param {boolean} primary
- * @param {number} rawX
- * @param {number} rawY
+ * @return {boolean}
  */
-createjs.MouseEvent.prototype.initialize = function(type, stageX, stageY, target, nativeEvent, pointerID, primary, rawX, rawY) {};
+createjs.MouseEvent.prototype.hasEventListener = function(type) {};
+
+/**
+ * @param {Object} target 
+ */
+createjs.MouseEvent.initialize = function(target) {};
+
+/**
+ * @param {string} type
+ * @param {Function|Object} listener
+ * @param {boolean=} useCapture
+ * @return {boolean}
+ */
+createjs.MouseEvent.prototype.off = function(type, listener, useCapture) {};
+
+/**
+ * @param {string} type
+ * @param {Function|Object} listener
+ * @param {Object=} scope
+ * @param {boolean=} once
+ * @param {*=} data
+ * @param {boolean=} useCapture
+ * @return {boolean}
+ */
+createjs.MouseEvent.prototype.on = function(type, listener, scope, once, data, useCapture) {};
+
+/**
+ * @param {string=} type
+ */
+createjs.MouseEvent.prototype.removeAllEventListeners = function(type) {};
+
+/**
+ * @param {string} type
+ * @param {Function|Object} listener
+ * @param {boolean=} useCapture
+ */
+createjs.MouseEvent.prototype.removeEventListener = function(type, listener, useCapture) {};
+
+/**
+ * @return {string}
+ */
+createjs.MouseEvent.prototype.toString = function() {};

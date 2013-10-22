@@ -1,13 +1,14 @@
 /**
- * @fileoverview Externs for the easeljs
+ * @fileoverview Externs for tweenjs
  * @externs
  */
 
 /**
  * @constructor
+ * @extends {createjs.EventDispatcher}
  * @param {Array.<createjs.Tween>} tweens
  * @param {Array.<string>} labels
- * @param {*} props
+ * @param {Object} props
  */
 createjs.Timeline = function(tweens, labels, props) {};
 
@@ -27,6 +28,7 @@ createjs.Timeline.prototype.ignoreGlobalPause;
 createjs.Timeline.prototype.loop;
 
 /**
+ * @deprecated Listen to 'change' event
  * @type {Function}
  */
 createjs.Timeline.prototype.onChange;
@@ -43,34 +45,46 @@ createjs.Timeline.prototype.position;
 createjs.Timeline.prototype.addLabel = function(label, position) {};
 
 /**
- * @param {Object} o
- */
-createjs.Timeline.prototype.setLabels = function(o) {};
-
-/**
  * @param {createjs.Tween} tween
+ * @return {createjs.Tween}
  */
 createjs.Timeline.prototype.addTween = function(tween) {};
 
 /**
- * @param {Object} positionOrLabel
+ * @return {string}
+ */
+createjs.Timeline.prototype.getCurrentLabel = function() {};
+
+/**
+ * @return {Array.<Object>}
+ */
+createjs.Timeline.prototype.getLabels = function() {};
+
+/**
+ * @param {string|number} positionOrLabel
  */
 createjs.Timeline.prototype.gotoAndPlay = function(positionOrLabel) {};
 
 /**
- * @param {Object} positionOrLabel
+ * @param {string|number} positionOrLabel
  */
 createjs.Timeline.prototype.gotoAndStop = function(positionOrLabel) {};
 
 /**
  * @param {createjs.Tween} tween
+ * @return {boolean}
  */
 createjs.Timeline.prototype.removeTween = function(tween) {};
 
 /**
- * @param {Object} positionOrLabel 
+ * @param {string|number} positionOrLabel 
  */
 createjs.Timeline.prototype.resolve = function(positionOrLabel) {};
+
+/**
+ * @param {Object} o
+ */
+createjs.Timeline.prototype.setLabels = function(o) {};
 
 /**
  * @param {boolean} value
@@ -79,7 +93,8 @@ createjs.Timeline.prototype.setPaused = function(value) {};
 
 /**
  * @param {number} value
- * @param {*} actionsMode
+ * @param {number=} actionsMode
+ * @return {boolean}
  */
 createjs.Timeline.prototype.setPosition = function(value, actionsMode) {};
 
@@ -87,11 +102,6 @@ createjs.Timeline.prototype.setPosition = function(value, actionsMode) {};
  * @param {number} delta
  */
 createjs.Timeline.prototype.tick = function(delta) {};
-
-/**
- * @return {string}
- */
-createjs.Timeline.prototype.toString = function() {};
 
 /**
  * 

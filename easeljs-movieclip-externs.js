@@ -1,5 +1,5 @@
 /**
- * @fileoverview Externs for the easeljs
+ * @fileoverview Externs for easeljs
  * @externs
  */
 
@@ -32,6 +32,11 @@ createjs.MovieClip.buildDate;
  * @type {number}
  */
 createjs.MovieClip.prototype.currentFrame;
+
+/**
+ * @type {Array}
+ */
+createjs.MovieClip.prototype.frameBounds;
 
 /**
  * @type {string}
@@ -77,6 +82,16 @@ createjs.MovieClip.prototype.timeline;
  * @type {string}
  */
 createjs.MovieClip.version;
+
+/**
+ * @return {string}
+ */
+createjs.MovieClip.prototype.getCurrentLabel = function() {};
+
+/**
+ * @return {Array.<Object>}
+ */
+createjs.MovieClip.prototype.getLabels = function() {};
 
 /**
  * @param {string|number} positionOrLabel

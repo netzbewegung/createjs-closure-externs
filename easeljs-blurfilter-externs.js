@@ -1,5 +1,5 @@
 /**
- * @fileoverview Externs for the easeljs
+ * @fileoverview Externs for easeljs
  * @externs
  */
 
@@ -10,19 +10,19 @@
  * @param {number=} blurY
  * @param {number=} quality
  */
-createjs.BoxBlurFilter = function(blurX, blurY, quality) {};
+createjs.BlurFilter = function(blurX, blurY, quality) {};
 
 /**
  * @type {number}
  */
-createjs.BoxBlurFilter.prototype.blurX;
+createjs.BlurFilter.prototype.blurX;
 
 /**
  * @type {number}
  */
-createjs.BoxBlurFilter.prototype.blurY;
+createjs.BlurFilter.prototype.blurY;
 
 /**
  * @type {number}
  */
-createjs.BoxBlurFilter.prototype.quality;
+createjs.BlurFilter.prototype.quality;

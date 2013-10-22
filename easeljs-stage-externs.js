@@ -1,5 +1,5 @@
 /**
- * @fileoverview Externs for the easeljs
+ * @fileoverview Externs for easeljs
  * @externs
  */
 
@@ -46,6 +46,35 @@ createjs.Stage.prototype.mouseX;
 createjs.Stage.prototype.mouseY;
 
 /**
+ * @type {createjs.Stage}
+ */
+createjs.Stage.prototype.nextStage;
+
+/**
+ * @deprecated Listen to 'stagemousedown' event
+ * @type {Function}
+ */
+createjs.Stage.prototype.onMouseDown;
+
+/**
+ * @deprecated Listen to 'stagemousemove' event
+ * @type {Function}
+ */
+createjs.Stage.prototype.onMouseMove;
+
+/**
+ * @deprecated Listen to 'stagemouseup' event
+ * @type {Function}
+ */
+createjs.Stage.prototype.onMouseUp;
+
+/**
+ * @deprecated Hardware acceleration makes this not beneficial
+ * @type {boolean}
+ */
+createjs.Stage.prototype.snapToPixelEnabled;
+
+/**
  * @type {boolean}
  */
 createjs.Stage.prototype.tickOnUpdate;
@@ -73,6 +102,6 @@ createjs.Stage.prototype.enableMouseOver = function(frequency) {};
 createjs.Stage.prototype.toDataURL = function(backgroundColor, mimeType) {};
 
 /**
- *
+ * @param {*=} params
  */
-createjs.Stage.prototype.update = function() {};
+createjs.Stage.prototype.update = function(params) {};

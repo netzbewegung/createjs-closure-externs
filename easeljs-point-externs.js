@@ -1,5 +1,5 @@
 /**
- * @fileoverview Externs for the easeljs
+ * @fileoverview Externs for easeljs
  * @externs
  */
 
@@ -24,6 +24,18 @@ createjs.Point.prototype.y;
  * @return {createjs.Point}
  */
 createjs.Point.clone = function() {};
+
+/**
+ * @return {createjs.Point}
+ */
+createjs.Point.copy = function() {};
+
+/**
+ * @param {number=} x
+ * @param {number=} y
+ * @return {createjs.Point}
+ */
+createjs.Point.initialize = function(x, y) {};
 
 /**
  * @return {string}

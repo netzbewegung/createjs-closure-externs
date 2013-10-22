@@ -1,12 +1,16 @@
 /**
- * @fileoverview Externs for the easeljs
+ * @fileoverview Externs for tweenjs
  * @externs
  */
 
 /**
  * @constructor
+ * @extends {createjs.EventDispatcher}
+ * @param {Object} target
+ * @param {Object=} props
+ * @param {Object=} pluginData
  */
-createjs.Tween = function() {};
+createjs.Tween = function(target, props, pluginData) {};
 
 /**
  * @type {number}
@@ -14,7 +18,7 @@ createjs.Tween = function() {};
 createjs.Tween.prototype.duration;
 
 /**
- * @type {*}
+ * @type {Object}
  */
 createjs.Tween.IGNORE;
 
@@ -39,9 +43,15 @@ createjs.Tween.prototype.loop;
 createjs.Tween.NONE;
 
 /**
+ * @deprecated Listen to 'change' event
  * @type {Function}
  */
 createjs.Tween.prototype.onChange;
+
+/**
+ * @type {boolean}
+ */
+createjs.Tween.prototype.passive;
 
 /**
  * @type {Object}
@@ -81,24 +91,27 @@ createjs.Tween.prototype.call = function(callback, params, scope) {};
 createjs.Tween.get = function(target, props, pluginData, override) {};
 
 /**
- * @param {Object} plugin
- * @param {Array} properties
- */
-createjs.Tween.installPlugin = function(plugin, properties) {};
-
-/**
- * @param {Object} target
+ * @param {Object=} target
  * @return {boolean}
  */
 createjs.Tween.hasActiveTweens = function(target) {};
 
 /**
+ * @param {Object} plugin
+ * @param {Array} properties
+ */
+createjs.Tween.installPlugin = function(plugin, properties) {};
+
+
+/**
  * @param {createjs.Tween} tween
+ * @return {createjs.Tween}
  */
 createjs.Tween.prototype.pause = function(tween) {};
 
 /**
  * @param {createjs.Tween} tween
+ * @return {createjs.Tween}
  */
 createjs.Tween.prototype.play = function(tween) {};
 
@@ -152,12 +165,8 @@ createjs.Tween.tick = function(delta, paused) {};
 createjs.Tween.prototype.to = function(props, duration, ease) {};
 
 /**
- * @return {string}
- */
-createjs.Tween.prototype.toString = function() {};
-
-/**
  * @param {number} duration
+ * @param {boolean} passive
  * @return {createjs.Tween}
  */
-createjs.Tween.prototype.wait = function(duration) {};
+createjs.Tween.prototype.wait = function(duration, passive) {};

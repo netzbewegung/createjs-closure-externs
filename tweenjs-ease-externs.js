@@ -1,5 +1,5 @@
 /**
- * @fileoverview Externs for the easeljs
+ * @fileoverview Externs for tweenjs
  * @externs
  */
 
@@ -9,209 +9,209 @@
 createjs.Ease = function() {};
 
 /**
- * @return {*}
+ * @return {number}
  */
 createjs.Ease.backIn = function() {};
 
 /**
- * @return {*}
+ * @return {number}
  */
 createjs.Ease.backInOut = function() {};
 
 /**
- * @return {*}
+ * @return {number}
  */
 createjs.Ease.backOut = function() {};
 
 /**
- * @return {*}
+ * @return {number}
  */
 createjs.Ease.bounceIn = function() {};
 
 /**
- * @return {*}
+ * @return {number}
  */
 createjs.Ease.bounceInOut = function() {};
 
 /**
- * @return {*}
+ * @return {number}
  */
 createjs.Ease.bounceOut = function() {};
 
 /**
- * @return {*}
+ * @return {number}
  */
 createjs.Ease.circIn = function() {};
 
 /**
- * @return {*}
+ * @return {number}
  */
 createjs.Ease.circInOut = function() {};
 
 /**
- * @return {*}
+ * @return {number}
  */
 createjs.Ease.circOut = function() {};
 
 /**
- * @return {*}
+ * @return {number}
  */
 createjs.Ease.cubicIn = function() {};
 
 /**
- * @return {*}
+ * @return {number}
  */
 createjs.Ease.cubicInOut = function() {};
 
 /**
- * @return {*}
+ * @return {number}
  */
 createjs.Ease.cubicOut = function() {};
 
 /**
- * @return {*}
+ * @return {number}
  */
 createjs.Ease.elasticIn = function() {};
 
 /**
- * @return {*}
+ * @return {number}
  */
 createjs.Ease.elasticInOut = function() {};
 
 /**
- * @return {*}
+ * @return {number}
  */
 createjs.Ease.elasticOut = function() {};
 
 /**
- * @return {*}
- */
-createjs.Ease.linear = function() {};
-
-/**
- * @return {*}
- */
-createjs.Ease.none = function() {};
-
-/**
- * @return {*}
- */
-createjs.Ease.quadIn = function() {};
-
-/**
- * @return {*}
- */
-createjs.Ease.quadInOut = function() {};
-
-/**
- * @return {*}
- */
-createjs.Ease.quadOut = function() {};
-
-/**
- * @return {*}
- */
-createjs.Ease.quartIn = function() {};
-
-/**
- * @return {*}
- */
-createjs.Ease.quartInOut = function() {};
-
-/**
- * @return {*}
- */
-createjs.Ease.quartOut = function() {};
-
-/**
- * @return {*}
- */
-createjs.Ease.quintIn = function() {};
-
-/**
- * @return {*}
- */
-createjs.Ease.quintInOut = function() {};
-
-/**
- * @return {*}
- */
-createjs.Ease.quintOut = function() {};
-
-/**
- * @return {*}
- */
-createjs.Ease.sineIn = function() {};
-
-/**
- * @return {*}
- */
-createjs.Ease.sineInOut = function() {};
-
-/**
- * @return {*}
- */
-createjs.Ease.sineOut = function() {};
-
-/**
  * @param {number} amount
- * @return {*}
+ * @return {number}
  */
 createjs.Ease.get = function(amount) {};
 
 /**
  * @param {number} amount
- * @return {*}
+ * @return {number}
  */
 createjs.Ease.getBackIn = function(amount) {};
 
 /**
  * @param {number} amount
- * @return {*}
+ * @return {number}
  */
 createjs.Ease.getBackInOut = function(amount) {};
 
 /**
  * @param {number} amount
- * @return {*}
+ * @return {number}
  */
 createjs.Ease.getBackOut = function(amount) {};
 
 /**
  * @param {number} amplitude
  * @param {number} period
- * @return {*}
+ * @return {number}
  */
 createjs.Ease.getElasticIn = function(amplitude, period) {};
 
 /**
  * @param {number} amplitude
  * @param {number} period
- * @return {*}
+ * @return {number}
  */
 createjs.Ease.getElasticInOut = function(amplitude, period) {};
 
 /**
  * @param {number} amplitude
  * @param {number} period
- * @return {*}
+ * @return {number}
  */
 createjs.Ease.getElasticOut = function(amplitude, period) {};
 
 /**
  * @param {number} pow
- * @return {*}
+ * @return {number}
  */
 createjs.Ease.getPowIn = function(pow) {};
 
 /**
  * @param {number} pow
- * @return {*}
+ * @return {number}
  */
 createjs.Ease.getPowInOut = function(pow) {};
 
 /**
  * @param {number} pow
- * @return {*}
+ * @return {number}
  */
 createjs.Ease.getPowOut = function(pow) {};
+
+/**
+ * @return {number}
+ */
+createjs.Ease.linear = function() {};
+
+/**
+ * @return {number}
+ */
+createjs.Ease.none = function() {};
+
+/**
+ * @return {number}
+ */
+createjs.Ease.quadIn = function() {};
+
+/**
+ * @return {number}
+ */
+createjs.Ease.quadInOut = function() {};
+
+/**
+ * @return {number}
+ */
+createjs.Ease.quadOut = function() {};
+
+/**
+ * @return {number}
+ */
+createjs.Ease.quartIn = function() {};
+
+/**
+ * @return {number}
+ */
+createjs.Ease.quartInOut = function() {};
+
+/**
+ * @return {number}
+ */
+createjs.Ease.quartOut = function() {};
+
+/**
+ * @return {number}
+ */
+createjs.Ease.quintIn = function() {};
+
+/**
+ * @return {number}
+ */
+createjs.Ease.quintInOut = function() {};
+
+/**
+ * @return {number}
+ */
+createjs.Ease.quintOut = function() {};
+
+/**
+ * @return {number}
+ */
+createjs.Ease.sineIn = function() {};
+
+/**
+ * @return {number}
+ */
+createjs.Ease.sineInOut = function() {};
+
+/**
+ * @return {number}
+ */
+createjs.Ease.sineOut = function() {};

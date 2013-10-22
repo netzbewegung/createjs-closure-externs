@@ -1,16 +1,16 @@
 /**
- * @fileoverview Externs for the easeljs
+ * @fileoverview Externs for easeljs
  * @externs
  */
 
 /**
  * @constructor
- * @param {number} a
- * @param {number} b
- * @param {number} c
- * @param {number} d
- * @param {number} tx
- * @param {number} ty
+ * @param {number=} a
+ * @param {number=} b
+ * @param {number=} c
+ * @param {number=} d
+ * @param {number=} tx
+ * @param {number=} ty
  */
 createjs.Matrix2D = function(a, b, c, d, tx, ty) {};
 
@@ -42,7 +42,7 @@ createjs.Matrix2D.prototype.compositeOperation;
 /**
  * @type {number}
  */
-createjs.Matrix2D.prototype. d;
+createjs.Matrix2D.prototype.d;
 
 /**
  * @type {number}
@@ -114,6 +114,11 @@ createjs.Matrix2D.prototype.appendTransform = function(x, y, scaleX, scaleY, rot
 createjs.Matrix2D.prototype.clone = function() {};
 
 /**
+ * @return {createjs.Matrix2D}
+ */
+createjs.Matrix2D.prototype.copy = function() {};
+
+/**
  * @param {Object} target
  */
 createjs.Matrix2D.prototype.decompose = function(target) {};
@@ -124,12 +129,12 @@ createjs.Matrix2D.prototype.decompose = function(target) {};
 createjs.Matrix2D.prototype.identity = function() {};
 
 /**
- * @param {*} a
- * @param {*} b
- * @param {*} c
- * @param {*} d
- * @param {*} tx
- * @param {*} ty
+ * @param {number=} a
+ * @param {number=} b
+ * @param {number=} c
+ * @param {number=} d
+ * @param {number=} tx
+ * @param {number=} ty
  * @return {createjs.Matrix2D}
  */
 createjs.Matrix2D.prototype.initialize = function(a, b, c, d, tx, ty) {};
@@ -183,15 +188,15 @@ createjs.Matrix2D.prototype.prependProperties = function(alpha, shadow, composit
 createjs.Matrix2D.prototype.prependTransform = function(x, y, scaleX, scaleY, rotation, skewX, skewY, regX, regY) {};
 
 /**
- * @param {number} a
- * @param {number} b
- * @param {number} c
- * @param {number} d
- * @param {number} tx
- * @param {number} ty
- * @param {number} alpha
- * @param {createjs.Shadow} shadow
- * @param {string} compositeOperation
+ * @param {number=} a
+ * @param {number=} b
+ * @param {number=} c
+ * @param {number=} d
+ * @param {number=} tx
+ * @param {number=} ty
+ * @param {number=} alpha
+ * @param {createjs.Shadow=} shadow
+ * @param {string=} compositeOperation
  * @return {createjs.Matrix2D}
  */
 createjs.Matrix2D.prototype.reinitialize = function(a, b, c, d, tx, ty, alpha, shadow, compositeOperation) {};
@@ -220,6 +225,14 @@ createjs.Matrix2D.prototype.skew = function(skewX, skewY) {};
  * @return {string}
  */
 createjs.Matrix2D.prototype.toString = function() {};
+
+/**
+ * @param {number} x
+ * @param {number} y
+ * @param {createjs.Point|Object} pt
+ * @return {createjs.Matrix2D}
+ */
+createjs.Matrix2D.prototype.transformPoint = function(x, y, pt) {};
 
 /**
  * @param {number} x

@@ -1,11 +1,11 @@
 /**
- * @fileoverview Externs for the easeljs
+ * @fileoverview Externs for easeljs
  * @externs
  */
 
 /**
  * @constructor
- * @param {createjs.BitmapAnimation|createjs.MovieClip} target
+ * @param {createjs.Sprite|createjs.MovieClip} target
  * @param {string=} outLabel
  * @param {string=} overLabel
  * @param {string=} downLabel
@@ -36,7 +36,7 @@ createjs.ButtonHelper.prototype.overLabel;
 createjs.ButtonHelper.prototype.play;
 
 /**
- * @type {createjs.MovieClip|createjs.BitmapAnimation}
+ * @type {createjs.Sprite|createjs.BitmapAnimation}
  */
 createjs.ButtonHelper.prototype.target;
 

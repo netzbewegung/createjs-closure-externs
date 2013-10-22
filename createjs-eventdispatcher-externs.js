@@ -1,5 +1,5 @@
 /**
- * @fileoverview Externs for the easeljs
+ * @fileoverview Externs for createjs
  * @externs
  */
 
@@ -11,9 +11,10 @@ createjs.EventDispatcher  = function() {};
 /**
  * @param {string} type
  * @param {Function|Object} listener
+ * @param {boolean=} useCapture
  * @return {Function|Object}
  */
-createjs.EventDispatcher.prototype.addEventListener  = function(type, listener) {};
+createjs.EventDispatcher.prototype.addEventListener  = function(type, listener, useCapture) {};
 
 /**
  * @param {Object|String} eventObj
@@ -34,6 +35,25 @@ createjs.EventDispatcher.prototype.hasEventListener = function(type) {};
 createjs.EventDispatcher.initialize = function(target) {};
 
 /**
+ * @param {string} type
+ * @param {Function|Object} listener
+ * @param {boolean=} useCapture
+ * @return {boolean}
+ */
+createjs.EventDispatcher.prototype.off = function(type, listener, useCapture) {};
+
+/**
+ * @param {string} type
+ * @param {Function|Object} listener
+ * @param {Object=} scope
+ * @param {boolean=} once
+ * @param {*=} data
+ * @param {boolean=} useCapture
+ * @return {boolean}
+ */
+createjs.EventDispatcher.prototype.on = function(type, listener, scope, once, data, useCapture) {};
+
+/**
  * @param {string=} type
  */
 createjs.EventDispatcher.prototype.removeAllEventListeners = function(type) {};
@@ -41,8 +61,9 @@ createjs.EventDispatcher.prototype.removeAllEventListeners = function(type) {};
 /**
  * @param {string} type
  * @param {Function|Object} listener
+ * @param {boolean=} useCapture
  */
-createjs.EventDispatcher.prototype.removeEventListener = function(type, listener) {};
+createjs.EventDispatcher.prototype.removeEventListener = function(type, listener, useCapture) {};
 
 /**
  * @return {string}
