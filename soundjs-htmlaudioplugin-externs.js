@@ -75,7 +75,7 @@ createjs.HTMLAudioPlugin.prototype.preload = function(src, instance, basePath) {
 /**
  * @param {string} src
  * @param {number} instances
- * @return {Oject}
+ * @return {Object}
  */
 createjs.HTMLAudioPlugin.prototype.register = function(src, instances) {};
 
